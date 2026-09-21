@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Image Resizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>📷 Image Resizer</h2>
+        
+        <div class="upload-box" id="dropArea">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <div class="content">
+                <p>Drag & Drop an image here</p>
+                <span>or</span>
+                <button type="button" id="browseBtn">Browse Image</button>
+            </div>
+            <img id="previewImg" src="" alt="Preview" hidden>
+        </div>
+
+        <div class="controls-form disabled" id="controlsForm">
+            <div class="row dimensions">
+                <div class="column width">
+                    <label>Width (px)</label>
+                    <input type="number" id="widthInput" min="1">
+                </div>
+                <div class="column height">
+                    <label>Height (px)</label>
+                    <input type="number" id="heightInput" min="1">
+                </div>
+            </div>
+
+            <div class="row options">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="aspectRatioCheck" checked>
+                    Lock Aspect Ratio
+                </label>
+            </div>
+
+            <button type="button" id="downloadBtn" class="download-btn">Download Resized Image</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
